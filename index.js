@@ -17,7 +17,7 @@ const totalParticipants = noOfRooms * noOfSeatsInRoom;
 let roomCounter = 0;
 let seatCounter = 0;
 let role = "host";
-for (let i = 0; i <= totalParticipants; i += 1) {
+for (let i = 0; i < totalParticipants; i += 1) {
   if (seatCounter > 0) {
     role = "participant";
   } else {
@@ -32,7 +32,7 @@ for (let i = 0; i <= totalParticipants; i += 1) {
   };
 
   seatCounter += 1;
-  if (seatCounter > noOfSeatsInRoom) {
+  if (seatCounter >= noOfSeatsInRoom) {
     seatCounter = 0;
     roomCounter += 1;
   }
