@@ -7,7 +7,7 @@ const noOfRooms = NO_OF_ROOMS;
 const noOfSeatsInRoom = NO_OF_USERS_PER_ROOM;
 
 // for eg: email_10@example.org
-const emailDomain = "@example.org";
+const emailDomain = "example.org";
 
 // Let's generate json for each rooms
 let userList = {};
