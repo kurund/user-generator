@@ -1,6 +1,6 @@
 // simple script to generate random users for the load testing
 const fs = require("fs");
-const { SERVER_NAMES, NO_OF_ROOMS, NO_OF_USERS_PER_ROOM } = require("./config");
+require("./config.js");
 
 const serverNo = SERVER_NAMES;
 const noOfRooms = NO_OF_ROOMS;

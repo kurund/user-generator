@@ -3,6 +3,6 @@
 **How to generate file**
 
 - Copy config.js.sample to config.js
-- Run `node index.js`
+- Run `yarn generate`
 
-UserList.json file will be generated
+UserList.json file will be generated in the root folder.

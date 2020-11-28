@@ -2,7 +2,9 @@
   "name": "user-generator",
   "version": "1.0.0",
   "description": "Random user generator",
-  "main": "index.js",
   "author": "Kurund Jalmi <kurund.jalmi@gmail.com>",
-  "license": "AGPL 3.0"
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "generate": "node index.js"
+  }
 }
