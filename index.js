@@ -18,7 +18,10 @@ let roomCounter = 0;
 let seatCounter = 0;
 let role = "host";
 for (let i = 0; i < totalParticipants; i += 1) {
-  if (seatCounter > 0) {
+  // let increment the counter
+  seatCounter += 1;
+
+  if (seatCounter < noOfSeatsInRoom) {
     role = "participant";
   } else {
     role = "host";
@@ -31,7 +34,6 @@ for (let i = 0; i < totalParticipants; i += 1) {
     seatNo: seatCounter,
   };
 
-  seatCounter += 1;
   if (seatCounter >= noOfSeatsInRoom) {
     seatCounter = 0;
     roomCounter += 1;
