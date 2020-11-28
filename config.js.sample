@@ -1,3 +1,4 @@
 module.exports = SERVER_NAMES = ["http://testing-server.com"];
 module.exports = NO_OF_ROOMS = 15;
 module.exports = NO_OF_USERS_PER_ROOM = 25; // including proctor / host
+module.exports = NO_OF_PROCTORS_PER_ROOM = 1;

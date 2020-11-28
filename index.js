@@ -18,13 +18,16 @@ let roomCounter = 0;
 let seatCounter = 0;
 let role = "host";
 for (let i = 0; i < totalParticipants; i += 1) {
-  // let increment the counter
-  seatCounter += 1;
+  if (seatCounter >= noOfSeatsInRoom) {
+    seatCounter = 0;
+    roomCounter += 1;
+  }
 
-  if (seatCounter < noOfSeatsInRoom) {
-    role = "participant";
-  } else {
+  // let's substract 1 as we start with 0
+  if (seatCounter === noOfSeatsInRoom - 1) {
     role = "host";
+  } else {
+    role = "participant";
   }
 
   userList[`email_${i}@${emailDomain}`] = {
@@ -34,10 +37,8 @@ for (let i = 0; i < totalParticipants; i += 1) {
     seatNo: seatCounter,
   };
 
-  if (seatCounter >= noOfSeatsInRoom) {
-    seatCounter = 0;
-    roomCounter += 1;
-  }
+  // let increment the counter
+  seatCounter += 1;
 }
 
 const jsonContent = JSON.stringify(userList);
